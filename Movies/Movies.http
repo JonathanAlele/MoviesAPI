@@ -1,6 +1,34 @@
 @Movies_HostAddress = http://localhost:5115
 
-GET {{Movies_HostAddress}}/weatherforecast/
+GET {{Movies_HostAddress}}/api/movies
 Accept: application/json
 
 ###
+
+GET {{Movies_HostAddress}}/api/movies/2
+Accept: application/json
+
+###
+
+POST {{Movies_HostAddress}}/api/movies/
+Content-Type: application/json
+
+{
+  "title": "Pure Monate Show",
+  "genre": "Kasi Comedy",
+  "releaseDate": "2005-07-02T00:00:00"
+}
+
+###
+PUT {{Movies_HostAddress}}/api/movies/6
+Content-Type: application/json
+
+  {
+    "id": 6,
+    "title": "Pure Monate Show",
+    "genre": "Comedy",
+    "releaseDate": "2005-07-02T00:00:00"
+  }
+###
+
+DELETE {{Movies_HostAddress}}/api/movies/6
